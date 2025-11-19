@@ -13,6 +13,6 @@ class Animal():
     def get_name(self)->str:
         #print(f"Name of the animal: {self.name}")
         return self.name
-animal=Animal("Dog","Sekar")
-name=animal.get_name()
+animal:Animal=Animal("Dog","Sekar")
+name:str=animal.get_name()
 # %%
