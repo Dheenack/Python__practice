@@ -10,12 +10,15 @@ def evenOrOdd(num:int)->None:
     print("EOvdedn"[num%2::2])
 
 def fact(n:int)->int:
-    if(n<0): return -1
-    if(n==0):
-        return 1
-    else:
-        return n*fact(n-1)
-
+    try: 
+        if(n<0): raise Exception("InvalidInputException")
+        if(n==0):
+            return 1
+        else:
+            return n*fact(n-1)
+    except Exception as e:
+        return(e)
+    
 def fibo(n:int)->None:
     a,b=0,1
     for _ in range(n):
@@ -44,7 +47,8 @@ def reverse_string(string:str)->str:
 if __name__=="__main__":
     # evenOrOdd(5)
     # hw()
-    # print(fact(0))
-    # fibo(5)
-    print(reverse_string("hello"))
-    print(isPalindrome("12321"))
+    print(fact(-100))
+    # fibo(-100)
+    # print(reverse_string("hello"))
+    # print(isPalindrome("12321"))
+    
