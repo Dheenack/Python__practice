@@ -43,6 +43,10 @@ def reverse_string(string:str)->str:
         j-=1
     return s
 
+# * character count in string
+def count_char(string:str,char:str)->int:
+    return string.count(char)
+
 
 if __name__=="__main__":
     # evenOrOdd(5)
